@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Denemeler</title>
+</head>
+
+<form action="#" method="post">
+    <input type="text" name="txt1" id="txt11">
+    <input type="text" name="txt22" id="txt22">
+
+    <button type="button" onclick="calculate()">
+        Calculate
+    </button>
+</form>
+
+<div id="deneme">
+
+</div>
+
+<script>
+    function calculate() {
+        let n1 = document.getElementById("txt11").value;
+        let n2 = document.getElementById("txt22").value;
+        let result = ((parseInt(n1) * 30 / 100) + (parseInt(n2) * 70 / 100));
+        alert(n1)
+        alert(n2)
+        alert(result);
+        if (result >= 50) {
+            document.getElementById("deneme").innerHTML = `<strong>"GEÇTİ"</strong>`;
+        } else {
+            document.getElementById("deneme").innerHTML = '<strong>"KALDI"</strong>';
+        }
+
+
+    }
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

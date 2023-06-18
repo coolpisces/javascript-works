@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast</title>
+</head>
+
+<body>
+    <h1>Hava Durumu</h1>
+    <p>Anlık hava sıcaklığını giriniz...</p>
+    <input type="text" name="txt" id="txt1">
+    <button type="button" onclick="hesapla()">Hesapla</button>
+    <p id="result"><strong></strong></p>
+
+
+
+    <script>
+        function hesapla() {
+            let sicaklik = parseInt(document.getElementById("txt1").value);
+
+            if (sicaklik < 0)
+                document.getElementById("result").innerHTML = "Dondurucu";
+            else if (sicaklik < 15 && sicaklik >= 0)
+                document.getElementById("result").innerHTML = "Soğuk";
+            else if (sicaklik < 25 && sicaklik >= 15)
+                document.getElementById("result").innerHTML = "Ilık";
+            else
+                document.getElementById("result").innerHTML = "Sıcak";
+
+        }
+    </script>
+
+</body>
+
+</html>

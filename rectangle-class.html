@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dikdörtgen</title>
+</head>
+
+<body>
+
+
+    <script>
+        class Dikdortgen {
+            constructor(genislik, yukseklik) {
+                this.genislik = genislik;
+                this.yukseklik = yukseklik;
+            }
+
+            alan() {
+                return this.genislik * this.yukseklik;
+            }
+
+            cevre() {
+                return (this.genislik * this.yukseklik) * 2;
+            }
+        }
+
+        let dikdortgen1 = new Dikdortgen();
+
+        dikdortgen1.genislik = Number(prompt("Genislik..."));
+        dikdortgen1.yukseklik = Number(prompt("Yükseklik..."));
+        document.write("Alan => " + dikdortgen1.alan());
+        document.write("Çevre => " + dikdortgen1.cevre());
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faktöriyel</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container bg-success-subtle">
+        <div class="m-5 p-5">
+            <div class="mb-3">
+                <label for="" class="form-label">Faktöriyel Hesapla</label>
+                <input type="text" class="form-control" name="" id="txtFaktoriyel" placeholder="Sayıyı giriniz...">
+
+            </div>
+            <label for="" class="form-label"></label>
+            <textarea class="form-control  m-3 text-danger fs-1" name="" id="txtarea" rows="2">
+
+            </textarea>
+            <button type="button" onclick="hesapla()">hesapla</button>
+
+        </div>
+    </div>
+    <script>
+        function hesapla() {
+            let sayi = parseInt(document.getElementById("txtFaktoriyel").value);
+            document.getElementById("txtarea").innerHTML = factorial(sayi);
+        }
+
+        function factorial(sayi) {
+            if (sayi < 0) {
+                return "Sayı negatif olamaz!"
+            } if (sayi <= 1) {
+                return 1;
+            }
+            return sayi * factorial(sayi - 1);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
