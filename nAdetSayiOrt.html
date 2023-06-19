@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Adet Sayının Ortalaması</title>
+</head>
+
+<body>
+
+
+    <script>
+        let n = prompt("Lütfen kaç adet sayı girileceğini belirtin?");
+        n = parseInt(n);
+        let array1 = new Array();
+
+        let sonuc = 0;
+
+        for (let i = 0; i < n; i++) {
+            array1[i] = Number(prompt(`Dizinin ${i}. elemanını giriniz`));
+            sonuc += array1[i];
+        }
+        document.write(sonuc / n);
+    </script>
+</body>
+
+</html>
