@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Process</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <input type="text" name="adn" onchange="formProcess()" id="ad" value="İçeriği doldurun...">
+                <input type="text" name="vize11" id="vize1" onchange="kontrol()">
+            </div>
+        </div>
+    </div>
+    <script>
+        function formProcess() {
+            let icerik = document.getElementById("ad").value;
+            if (icerik == "") alert("Lütfen adınızı giriniz...");
+            else
+                alert("Adınız: " + icerik);
+        }
+        function kontrol() {
+            let kontrol = document.getElementById("vize1").value;
+            if (kontrol > 100 || kontrol < 0) alert("Lütfen geçerli bir değer giriniz...");
+        }
+    </script>
+</body>
+
+</html>
